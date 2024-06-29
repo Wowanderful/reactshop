@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  padding-left: 10px;
+}
+
+.brand-logo {
+  font-weight: 800;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 38px);
+  padding: 1.5em, 0;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem
+}
+
+.collection {
+  position: fixed;
+  top: 5rem;
+  left: 35%;
+}
+
+.button-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: white;
+}
+
+.basket-delete {
+  cursor: pointer;
+}
