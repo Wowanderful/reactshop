@@ -51,7 +51,7 @@ function Shop () {
     }
 
     const closeAlert = () => {
-        setAlertName(' ')
+        setAlertName('')
     }
 
     useEffect (function getGoods () {
@@ -108,7 +108,7 @@ function Shop () {
                                 decQuantity = {decQuantity}/>
             }
             {
-                alertName && <Alert name={alertName} cloaseAlert={closeAlert} />
+                alertName && <Alert name={alertName} closeAlert={closeAlert} />
             }
         </main>
     )

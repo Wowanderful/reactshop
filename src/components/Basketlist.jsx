@@ -8,8 +8,8 @@ function BasketList (props) {
     }, 0)
 
     return (
-        <div className="collection">
-            <li  className="collection-item active">Cart</li>
+        <ul className="collection">
+            <li  className="collection-item active my-collection">Cart</li>
                 { order.length ? order.map(item => (
                     <BasketItem 
                         key={item.id} 
@@ -20,11 +20,12 @@ function BasketList (props) {
                     />
                 )) : <li  className="collection-item">Basket is empty</li>
                 }
-            <li className="collection-item active">Total price: ${totalPrice}
-                <button className="btn secondary-content">Order</button>           
-            </li>
+            <li className="collection-item active my-collection">Total price: ${totalPrice}
+               <button className="btn secondary-content btn-order">Order</button>           
+            </li> 
+            
             <i className="material-icons button-close" onClick={handleBasketShow}>close</i>
-        </div>
+        </ul>
     )
 }
 

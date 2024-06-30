@@ -1,3 +1,11 @@
+html {
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 code {
@@ -14,6 +23,11 @@ code {
 
 nav {
   padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 .brand-logo {
@@ -25,6 +39,48 @@ nav {
   padding: 1.5em, 0;
 }
 
+.cart {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  cursor: pointer;
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  z-index: 10;
+  background-color: #9e9d24 ;
+
+  &:hover {
+    background-color: #c0ca33;
+  }
+
+  @media (min-width: 1000px) {
+    width: 100px;
+    height: 100px;
+    top: 7rem;
+    right: 5rem;
+  }
+}
+
+.cart-i {
+  color: white;
+}
+
+.cart-quantity {
+  position: absolute;
+  bottom: 0;
+  left: 54%;
+  font-size: 43px;
+  @media(min-width: 1000px) {
+    bottom: -6px;
+    left: 71%;
+  }
+
+}
+
 .goods {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -33,18 +89,84 @@ nav {
 
 .collection {
   position: fixed;
-  top: 5rem;
-  left: 35%;
+  bottom: 5rem;
+  width: 95%;
+  left: 1rem;
+  height: auto;
+  overflow: scroll;
+
+  @media (min-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    top: 40%;
+    left: calc(50% - 200px);
+    border: none;
+  }
 }
 
-.button-close {
+.collection .collection-item.my-collection {
+  background-color: #c0ca33;
+  position: relative;
+}
+
+.btn-order {
   cursor: pointer;
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  right: 5px;
+  bottom: 1px;
+  width: 30%;
   color: white;
+  background-color: #9e9d24;
+  display: block;
+  &:hover, &:active, &:focus {
+    background-color: #c0ca33;
+  }
+  /* @media (min-width: 1000px) {
+    width: 80px;
+  } */
 }
 
 .basket-delete {
   cursor: pointer;
+  color: #eeff41;
+}
+
+.btn-decr {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #eeff41;
+  color: black;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-incr {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #eeff41;
+  color: black;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-close {
+  position: absolute;
+  top:7px;
+  right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+#toast-container {
+  position: fixed; 
+  top: 100px;
+  left: 50%;
+
 }
