@@ -105,6 +105,12 @@ nav {
   }
 }
 
+.card-image {
+  width: 100%;
+  height: auto;
+  background-color: tomato;
+}
+
 .collection .collection-item.my-collection {
   background-color: #c0ca33;
   position: relative;
@@ -156,6 +162,13 @@ nav {
   align-items: center;
 }
 
+.btn-buy {
+  background-color: #9e9d24;
+  &:hover {
+    background-color: #eeff41;
+  }
+}
+
 .button-close {
   position: absolute;
   top:7px;
@@ -168,5 +181,4 @@ nav {
   position: fixed; 
   top: 100px;
   left: 50%;
-
 }
